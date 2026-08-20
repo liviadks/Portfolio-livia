@@ -1,1 +1,1 @@
-meu portfólio lindo eba 😘❤️
+meu portfólio 😘❤️
