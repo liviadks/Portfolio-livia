@@ -4,88 +4,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Lívia Faria Derks: desenhos digitais e design gráfico." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/home.css" />
-  <title>Portfólio</title>
+  <title>Portfólio | Lívia Faria Derks</title>
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="nav__bar">
-      <button type="button" class="nav__menu__btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false"
-        aria-controls="nav-links">
-        <i class="ri-menu-3-line" aria-hidden="true"></i>
-      </button>
-    </div>
-    <ul class="nav__links" id="nav-links">
-      <li><a href="#home">Início</a></li>
-      <li><a href="#about">Sobre mim</a></li>
-      <li><a href="#service">Projetos</a></li>
-    </ul>
-    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=liviadks@gmail.com" target="_blank"
-      rel="noopener noreferrer" class="btn btn__large">Contato</a>
-  </nav>
+  <header class="topo container">
+    <a href="#inicio" class="topo__nome">Lívia Faria Derks</a>
+    <nav aria-label="Principal">
+      <ul class="topo__links">
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=liviadks@gmail.com" target="_blank"
+            rel="noopener noreferrer">Contato<span class="sr-only"> (abre em nova aba)</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <header class="section__container header__container" id="home">
-      <div class="header__image">
-        <img src="assets/img/ui/header.jpg" alt="header" />
-      </div>
-      <div class="header__content">
+    <section class="inicio container" id="inicio">
+      <div>
         <h1>Portfólio</h1>
-        <p class="section__description">
-          Lívia Faria Derks
-        </p>
+        <p class="inicio__nome">Lívia Faria Derks</p>
       </div>
-    </header>
-
-    <section class="section__container split" id="about">
-      <div class="about__image">
-        <img src="assets/img/ui/fundo-decorativo.png" alt="" class="about__bg-1" />
-        <img src="assets/img/ui/fundo-decorativo.png" alt="" class="about__bg-2" />
-        <img src="assets/img/ui/foto-livia.png" alt="about" class="about__img" />
-      </div>
-      <div class="about__content">
-        <h2 class="section__header">Sobre mim</h2>
-        <p class="section__description">
-          Meu nome é Lívia, tenho 18 anos e sou natural de Florianópolis, Santa Catarina. Sou formada no ensino médio
-          técnico em Análise de Desenvolvimento de Sistemas na Escola S (Sesi-Senai).
-          <br>
-          Sempre fui interessada pela tecnologia e, ao mesmo tempo, muito envolvida com a criatividade, como na criação de
-          desenhos digitais e designs variados. Essa combinação de interesses me ajudou a desenvolver uma visão única,
-          contribuindo para o meu objetivo final de me especializar em UX/UI Design e FrontEnd.
-        </p>
-        <div class="about__btn">
-          <a class="btn" target="_blank" rel="noopener noreferrer"
-            href="https://www.canva.com/design/DAFfF22N5eU/3cbk-CEfZ4D6fpEbZ4nQnw/edit?utm_content=DAFfF22N5eU&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">Currículo</a>
-          <a class="btn" href="https://github.com/liviadks" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/l%C3%ADviadks/" target="_blank"
-            rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
+      <img src="assets/img/ui/header.webp" alt="header" class="inicio__img" width="512" height="487" />
     </section>
 
-    <section class="section__container" id="service">
-      <h2 class="section__header">Projetos</h2>
-      <div class="service__grid">
-        <a class="service__card" href="desenhos.html">
-          <i class="ri-window-fill" aria-hidden="true"></i>
+    <section class="projetos container" id="projetos">
+      <h2>Projetos</h2>
+      <div class="projetos__lista">
+        <a href="desenhos.html" class="projeto-card">
+          <img src="assets/img/desenhos/stray.webp" alt="" width="2000" height="1604" loading="lazy" />
           <h3>Desenhos digitais</h3>
         </a>
-        <a class="service__card" href="design.html">
-          <i class="ri-window-fill" aria-hidden="true"></i>
+        <a href="design.html" class="projeto-card">
+          <img src="assets/img/design/meowshop/identidade-visual.webp" alt="" width="2000" height="1414"
+            loading="lazy" />
           <h3>Design gráfico</h3>
         </a>
       </div>
     </section>
+
+    <section class="sobre container" id="sobre">
+      <h2>Sobre mim</h2>
+      <div class="sobre__conteudo">
+        <img src="assets/img/ui/foto-livia.webp" alt="about" class="sobre__foto" width="940" height="905"
+          loading="lazy" />
+        <div class="sobre__texto">
+          <p>
+            Meu nome é Lívia, tenho 18 anos e sou natural de Florianópolis, Santa Catarina. Sou formada no ensino médio
+            técnico em Análise de Desenvolvimento de Sistemas na Escola S (Sesi-Senai).
+          </p>
+          <p>
+            Sempre fui interessada pela tecnologia e, ao mesmo tempo, muito envolvida com a criatividade, como na criação
+            de desenhos digitais e designs variados. Essa combinação de interesses me ajudou a desenvolver uma visão única,
+            contribuindo para o meu objetivo final de me especializar em UX/UI Design e FrontEnd.
+          </p>
+          <div class="sobre__links">
+            <a class="btn" target="_blank" rel="noopener noreferrer"
+              href="https://www.canva.com/design/DAFfF22N5eU/3cbk-CEfZ4D6fpEbZ4nQnw/edit?utm_content=DAFfF22N5eU&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton">Currículo<span class="sr-only"> (abre em nova aba)</span></a>
+            <a class="btn" href="https://github.com/liviadks" target="_blank" rel="noopener noreferrer">GitHub<span
+                class="sr-only"> (abre em nova aba)</span></a>
+            <a class="btn" href="https://www.linkedin.com/in/l%C3%ADviadks/" target="_blank"
+              rel="noopener noreferrer">LinkedIn<span class="sr-only"> (abre em nova aba)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-  <script src="js/main.js"></script>
+  <footer class="rodape container">
+    <p>© 2026 Lívia Faria Derks</p>
+  </footer>
 </body>
 
 </html>

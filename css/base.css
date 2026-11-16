@@ -1,14 +1,14 @@
-/* Base compartilhada por todas as páginas */
-
 :root {
-  --primary-color: #f7dcc5;
-  --secondary-color: #ce8448;
-  --extra-light: #f3f4f6;
-  --white: #ffffff;
-  --gradient-1: linear-gradient(to bottom right, #290E08, #A4643F);
-  --gradient-2: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-  --shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  --max-width: 1200px;
+  --fundo: #1e0c07;
+  --fundo-2: #2a1610;
+  --borda: #3d2419;
+  --texto: #f3e6da;
+  --texto-2: #c9a58a;
+  --destaque: #e39a63;
+  --destaque-hover: #eeb07f;
+  --fonte-titulo: "Fraunces", Georgia, serif;
+  --fonte-texto: "Inter", system-ui, sans-serif;
+  --largura: 1200px;
 }
 
 * {
@@ -22,72 +22,119 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  color: var(--white);
-  background-image: var(--gradient-1);
-}
-
-main {
-  min-height: 100vh;
+  font-family: var(--fonte-texto);
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--fundo);
 }
 
 img {
-  width: 100%;
-  display: flex;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 a {
+  color: var(--destaque);
+}
+
+a:hover {
+  color: var(--destaque-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--destaque);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* so pra leitor de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* topo */
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 1.5rem;
+}
+
+.topo__nome {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--texto);
   text-decoration: none;
 }
 
-.section__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 5rem 1rem;
+.topo__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
 }
 
-.section__header {
-  margin-bottom: 5rem;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
+.topo__links a {
+  color: var(--texto-2);
+  text-decoration: none;
 }
 
-.section__description {
-  max-width: 600px;
-  margin-inline: auto;
-  color: var(--extra-light);
-  text-align: center;
-  line-height: 1.75rem;
+.topo__links a:hover {
+  color: var(--texto);
 }
 
-/* Duas colunas a partir de 768px (Sobre mim e páginas de galeria) */
-.split {
-  display: grid;
-  gap: 2rem;
-}
-
+/* botao */
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
-  background-image: var(--gradient-2);
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  color: var(--fundo);
+  background-color: var(--destaque);
   border: none;
   border-radius: 5rem;
+  text-decoration: none;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s;
+  transition: background-color 0.2s;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  color: var(--fundo);
+  background-color: var(--destaque-hover);
 }
 
-@media (width > 768px) {
-  .split {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+.rodape {
+  padding-block: 3rem;
+  font-size: 0.9rem;
+  color: var(--texto-2);
+  border-top: 1px solid var(--borda);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
   }
 }

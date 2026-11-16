@@ -1,103 +1,99 @@
-/* Páginas de galeria (desenhos.html e design.html) */
-
-.page-nav {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
+.pagina {
+  padding-block: 2rem 4rem;
 }
 
-.page-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: start;
-  margin-top: 10%;
-}
-
-.page-intro__tools {
+.pagina h1 {
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
   font-weight: 500;
-  margin-block: 3%;
 }
 
-.page-intro a {
-  color: #ff69b4;
-  font-weight: 600;
+.ferramentas {
+  margin-top: 1rem;
+  color: var(--texto-2);
 }
 
-.page-intro a:hover {
-  color: #ff1493;
-}
-
-/* Grade de imagens: 3 colunas por padrão, --duo para 2 colunas */
+/* galeria (estilo masonry pra nao cortar os desenhos) */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: var(--max-width);
-  margin: 20px auto 0;
+  columns: 3 280px;
+  column-gap: 1.25rem;
+  margin-top: 2.5rem;
   list-style: none;
 }
 
-.gallery--duo {
-  grid-template-columns: repeat(2, minmax(400px, 1fr));
+.gallery--duas {
+  columns: 2 300px;
+}
+
+.gallery li {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
 }
 
 .photo {
-  width: 100%;
-  aspect-ratio: 4 / 2.8;
+  display: block;
+  border-radius: 0.5rem;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  cursor: zoom-in;
 }
 
 .photo img {
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  transition: opacity 0.2s;
 }
 
-.photo img:hover {
-  transform: scale(1.1);
+.photo:hover img {
+  opacity: 0.85;
 }
 
-/* Lista de projetos (design.html) */
-.projects {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+/* projetos de design */
+.projeto {
+  padding-top: 3.5rem;
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--borda);
 }
 
-.project:not(:last-child) {
-  margin-bottom: 70px;
+.projeto h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
 }
 
-.project__title {
-  padding-bottom: 10px;
+.projeto p {
+  max-width: 65ch;
+  color: var(--texto-2);
 }
 
-.project__parts {
+.projeto__partes {
+  margin-top: 0.25rem;
   font-weight: 600;
 }
 
-@media (max-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-  }
-
-  .gallery--duo {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
+.projeto .gallery {
+  margin-top: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .gallery--duo {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+/* imagem ampliada */
+.zoom {
+  max-width: 95vw;
+  max-height: 95vh;
+  margin: auto;
+  padding: 0;
+  background: none;
+  border: none;
 }
 
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
+.zoom::backdrop {
+  background-color: rgba(10, 4, 2, 0.92);
+}
+
+.zoom img {
+  max-width: 95vw;
+  max-height: 85vh;
+  width: auto;
+  margin-inline: auto;
+  border-radius: 0.5rem;
+}
+
+.zoom__fechar {
+  display: block;
+  margin: 0 0 0.75rem auto;
 }

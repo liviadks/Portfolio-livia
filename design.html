@@ -4,73 +4,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projetos de design gráfico de Lívia Faria Derks." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/galeria.css" />
-  <title>Designs</title>
+  <title>Design gráfico | Lívia Faria Derks</title>
 </head>
 
 <body>
-  <nav class="page-nav">
-    <a href="index.html" class="btn">Voltar</a>
-  </nav>
+  <header class="topo container">
+    <a href="index.html" class="topo__nome">Lívia Faria Derks</a>
+    <nav aria-label="Principal">
+      <ul class="topo__links">
+        <li><a href="index.html">Voltar</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main class="section__container split">
-    <div class="page-intro">
-      <h2>Ferramentas utilizadas:</h2>
-      <p class="page-intro__tools">Figma; Illustrator; Photoshop.</p>
-    </div>
+  <main class="pagina container">
+    <h1>Design gráfico</h1>
+    <p class="ferramentas">Ferramentas utilizadas: Figma; Illustrator; Photoshop.</p>
 
-    <div class="projects">
-      <article class="project">
-        <h2 class="project__title">Estampa Terceirão</h2>
-        <p>Design feito para o terceiro ano do ensino médio do Senai.</p>
-        <ul class="gallery gallery--duo">
-          <li class="photo"><img src="assets/img/design/estampa-terceirao/estampa-1.png" alt="Foto 1"></li>
-          <li class="photo"><img src="assets/img/design/estampa-terceirao/estampa-2.png" alt="Foto 2"></li>
-          <li class="photo"><img src="assets/img/design/estampa-terceirao/estampa-3.png" alt="Foto 3"></li>
-          <li class="photo"><img src="assets/img/design/estampa-terceirao/estampa-4.png" alt="Foto 4"></li>
-        </ul>
-      </article>
+    <!-- Projeto 1 -->
+    <section class="projeto">
+      <h2>Estampa Terceirão</h2>
+      <p>Design feito para o terceiro ano do ensino médio do Senai.</p>
+      <ul class="gallery gallery--duas">
+        <li><a class="photo" href="assets/img/design/estampa-terceirao/estampa-1.webp"><img src="assets/img/design/estampa-terceirao/estampa-1.webp" alt="Foto 1" width="2000" height="1630" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/estampa-terceirao/estampa-2.webp"><img src="assets/img/design/estampa-terceirao/estampa-2.webp" alt="Foto 2" width="1500" height="2000" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/estampa-terceirao/estampa-3.webp"><img src="assets/img/design/estampa-terceirao/estampa-3.webp" alt="Foto 3" width="1162" height="908" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/estampa-terceirao/estampa-4.webp"><img src="assets/img/design/estampa-terceirao/estampa-4.webp" alt="Foto 4" width="1156" height="908" loading="lazy"></a></li>
+      </ul>
+    </section>
 
-      <article class="project">
-        <h2 class="project__title">Papelaria Plug</h2>
-        <p>Banners criados para a propaganda de produtos exibidos no site da Papelaria Plug.</p>
-        <ul class="gallery gallery--duo">
-          <li class="photo"><img src="assets/img/design/papelaria-plug/banner-site.png" alt="Foto 1"></li>
-          <li class="photo"><img src="assets/img/design/papelaria-plug/banner-1.png" alt="Foto 2"></li>
-          <li class="photo"><img src="assets/img/design/papelaria-plug/banner-2.png" alt="Foto 3"></li>
-          <li class="photo"><img src="assets/img/design/papelaria-plug/banner-3.png" alt="Foto 4"></li>
-        </ul>
-      </article>
+    <!-- Projeto 2 -->
+    <section class="projeto">
+      <h2>Papelaria Plug</h2>
+      <p>Banners criados para a propaganda de produtos exibidos no site da Papelaria Plug.</p>
+      <ul class="gallery gallery--duas">
+        <li><a class="photo" href="assets/img/design/papelaria-plug/banner-site.webp"><img src="assets/img/design/papelaria-plug/banner-site.webp" alt="Foto 1" width="1141" height="819" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/papelaria-plug/banner-1.webp"><img src="assets/img/design/papelaria-plug/banner-1.webp" alt="Foto 2" width="647" height="731" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/papelaria-plug/banner-2.webp"><img src="assets/img/design/papelaria-plug/banner-2.webp" alt="Foto 3" width="595" height="619" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/papelaria-plug/banner-3.webp"><img src="assets/img/design/papelaria-plug/banner-3.webp" alt="Foto 4" width="599" height="575" loading="lazy"></a></li>
+      </ul>
+    </section>
 
-      <article class="project">
-        <h2 class="project__title">EcoPraia Florianópolis</h2>
-        <p>Projeto acadêmico onde foi feito o layout de um site de coleta de resíduos na cidade de Florianópolis.</p>
-        <p class="project__parts">Abas de login e cadastro - Tela principal - Desenho do mapa</p>
-        <ul class="gallery gallery--duo">
-          <li class="photo"><img src="assets/img/design/ecopraia/figma.png" alt="Foto 1"></li>
-          <li class="photo"><img src="assets/img/design/ecopraia/tela-principal.png" alt="Foto 2"></li>
-          <li class="photo"><img src="assets/img/design/ecopraia/login.png" alt="Foto 3"></li>
-          <li class="photo"><img src="assets/img/design/ecopraia/mapa.png" alt="Foto 4"></li>
-        </ul>
-      </article>
+    <!-- Projeto 3 -->
+    <section class="projeto">
+      <h2>EcoPraia Florianópolis</h2>
+      <p>Projeto acadêmico onde foi feito o layout de um site de coleta de resíduos na cidade de Florianópolis.</p>
+      <p class="projeto__partes">Abas de login e cadastro - Tela principal - Desenho do mapa</p>
+      <ul class="gallery gallery--duas">
+        <li><a class="photo" href="assets/img/design/ecopraia/figma.webp"><img src="assets/img/design/ecopraia/figma.webp" alt="Foto 1" width="846" height="606" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/ecopraia/tela-principal.webp"><img src="assets/img/design/ecopraia/tela-principal.webp" alt="Foto 2" width="1273" height="909" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/ecopraia/login.webp"><img src="assets/img/design/ecopraia/login.webp" alt="Foto 3" width="1041" height="824" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/ecopraia/mapa.webp"><img src="assets/img/design/ecopraia/mapa.webp" alt="Foto 4" width="1236" height="913" loading="lazy"></a></li>
+      </ul>
+    </section>
 
-      <article class="project">
-        <h2 class="project__title">MeowShop</h2>
-        <p>Projeto de estudos da criação de uma identidade visual para uma petshop.</p>
-        <p class="project__parts">Logo - Paleta - Instagram - Mockup</p>
-        <ul class="gallery gallery--duo">
-          <li class="photo"><img src="assets/img/design/meowshop/identidade-visual.png" alt="Foto 1"></li>
-          <li class="photo"><img src="assets/img/design/meowshop/instagram.png" alt="Foto 2"></li>
-          <li class="photo"><img src="assets/img/design/meowshop/logo.png" alt="Foto 3"></li>
-          <li class="photo"><img src="assets/img/design/meowshop/mockup-racao.png" alt="Foto 4"></li>
-        </ul>
-      </article>
-    </div>
+    <!-- Projeto 4 -->
+    <section class="projeto">
+      <h2>MeowShop</h2>
+      <p>Projeto de estudos da criação de uma identidade visual para uma petshop.</p>
+      <p class="projeto__partes">Logo - Paleta - Instagram - Mockup</p>
+      <ul class="gallery gallery--duas">
+        <li><a class="photo" href="assets/img/design/meowshop/identidade-visual.webp"><img src="assets/img/design/meowshop/identidade-visual.webp" alt="Foto 1" width="2000" height="1414" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/meowshop/instagram.webp"><img src="assets/img/design/meowshop/instagram.webp" alt="Foto 2" width="1360" height="890" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/meowshop/logo.webp"><img src="assets/img/design/meowshop/logo.webp" alt="Foto 3" width="1460" height="2000" loading="lazy"></a></li>
+        <li><a class="photo" href="assets/img/design/meowshop/mockup-racao.webp"><img src="assets/img/design/meowshop/mockup-racao.webp" alt="Foto 4" width="2000" height="1335" loading="lazy"></a></li>
+      </ul>
+    </section>
   </main>
+
+  <dialog class="zoom" id="zoom" aria-label="Imagem ampliada">
+    <button type="button" class="btn zoom__fechar" id="fechar">Fechar</button>
+  </dialog>
+
+  <script src="js/galeria.js"></script>
 </body>
 
 </html>
