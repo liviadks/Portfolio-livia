@@ -45,6 +45,23 @@
   opacity: 0.85;
 }
 
+/* todas as imagens do mesmo tamanho (corta as bordas) */
+.gallery--iguais {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  columns: auto;
+}
+
+.gallery--iguais li {
+  margin-bottom: 0;
+}
+
+.gallery--iguais img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 /* projetos de design */
 .projeto {
   padding-top: 3.5rem;
@@ -96,4 +113,11 @@
 .zoom__fechar {
   display: block;
   margin: 0 0 0.75rem auto;
+}
+
+@media (max-width: 900px) {
+  .gallery--iguais {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
 }
