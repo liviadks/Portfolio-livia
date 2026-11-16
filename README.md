@@ -1,8 +1,6 @@
-# Portfólio · Lívia Faria Derks
+# Portfólio · Lívia Derks
 
 Meu portfólio pessoal, onde reúno projetos de **UX e acessibilidade**, **design gráfico** e **desenhos digitais**.
-
-Sou estudante de Ciência da Informação na UFSC, com formação técnica em Desenvolvimento de Sistemas pelo Sesi-Senai. Hoje estou estudando principalmente UX/UI, acessibilidade e front-end.
 
 🔗 **Ver o site:** [liviadks.github.io/Portfolio-design](https://liviadks.github.io/Portfolio-design/)
 
