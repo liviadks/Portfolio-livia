@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estudo de caso: teste de acessibilidade da página inicial de 27 universidades federais com Lighthouse e WAVE." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/estudo.css" />
+  <title>Acessibilidade nos sites das universidades federais | Lívia Faria Derks</title>
+</head>
+
+<body>
+  <a class="pular-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo container">
+    <a href="index.html" class="topo__nome">Lívia Faria Derks</a>
+    <nav aria-label="Principal">
+      <ul class="topo__links">
+        <li><a href="index.html#projetos">Voltar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="estudo container" id="conteudo" tabindex="-1">
+    <div class="estudo__texto">
+      <h1>Acessibilidade nos sites das universidades federais</h1>
+
+      <p class="estudo__resumo">
+        <strong>Resumo:</strong> testei a página inicial de 27 universidades federais, uma por estado e no Distrito
+        Federal, com as ferramentas Lighthouse e WAVE. A nota média de acessibilidade foi cerca de 80 de 100, mas variou
+        de 53 a 97, e os erros mais comuns envolvem links, contraste e estrutura dos títulos.
+      </p>
+
+      <h2>Pergunta e motivação</h2>
+      <p>
+        Sites de universidades públicas atendem estudantes, servidores e candidatos, incluindo pessoas com deficiência.
+        Como estudante de Ciência da Informação com interesse em UX, quis saber: quão acessíveis são esses sites e quais
+        erros mais se repetem?
+      </p>
+
+      <h2>Método</h2>
+      <ul>
+        <li><strong>Amostra:</strong> a página inicial de uma universidade federal por estado, mais o DF (27 sites).</li>
+        <li><strong>Lighthouse (Chrome):</strong> categoria Acessibilidade, modo Navegação, dispositivo Computador, em janela anônima. Registrei a nota (0 a 100) e os tipos de erro apontados em cada site.</li>
+        <li><strong>WAVE (WebAIM):</strong> registrei o total de erros e os erros de contraste. A UFRN ficou sem o teste do WAVE porque o site estava fora do ar.</li>
+        <li><strong>Análise:</strong> planilha no Google Planilhas e dashboard no Looker Studio.</li>
+        <li><strong>Data dos testes:</strong> outubro de 2026.</li>
+      </ul>
+
+      <h2>Dashboard</h2>
+      <p>O painel abaixo mostra a nota de cada universidade, os erros mais comuns e a média por região.</p>
+    </div>
+
+    <!-- dashboard do looker studio -->
+    <div class="estudo__dashboard">
+      <iframe src="https://lookerstudio.google.com/embed/reporting/3e601cfb-b5fb-4b4c-958f-870da9666536"
+        title="Dashboard interativo: nota de acessibilidade de cada universidade federal, erros mais comuns e média por região"
+        loading="lazy" allowfullscreen></iframe>
+    </div>
+
+    <div class="estudo__texto">
+      <ul class="estudo__links">
+        <li>
+          <a href="https://lookerstudio.google.com/reporting/3e601cfb-b5fb-4b4c-958f-870da9666536" target="_blank"
+            rel="noopener noreferrer">Abrir o dashboard no Looker Studio (abre em nova aba)</a>
+        </li>
+        <li>
+          <a href="https://github.com/liviadks/acessibilidade-universidades-federais">Ver os dados e o método no GitHub</a>
+        </li>
+      </ul>
+
+      <h2>O que encontrei</h2>
+      <ol>
+        <li><strong>Os problemas mais comuns envolvem links.</strong> Links idênticos apareceram em 21 dos 27 sites (78%) e links sem nome em 20 (74%). Isso dificulta a vida de quem usa leitor de tela, que não consegue saber para onde cada link leva.</li>
+        <li><strong>Contraste e títulos também falham.</strong> Baixo contraste e títulos fora de ordem aparecem em 17 sites (63%). Imagens sem texto alternativo e alvos de toque pequenos aparecem em 13 (48%).</li>
+        <li><strong>As notas variam muito.</strong> A média é cerca de 80, com UFMG (97), UFES (96) e UFMA (92) no topo e UFSC (53), UFPR (64) e UNIFESP (69) entre as menores.</li>
+        <li><strong>As duas ferramentas medem coisas diferentes.</strong> A UFS tem nota 87 no Lighthouse e nenhum erro no WAVE, mas 125 erros de contraste. Usar só uma ferramenta daria uma visão incompleta.</li>
+        <li><strong>Por região,</strong> o Sudeste teve a maior média (86,5) e o Sul a menor (62,3), puxada pelos três sites da região. Como as amostras são pequenas, trato isso como indício, não como conclusão.</li>
+      </ol>
+
+      <h2>Limitações</h2>
+      <ul>
+        <li>Testei só a página inicial, e os sites mudam com o tempo.</li>
+        <li>Ferramentas automáticas detectam parte dos problemas. O Lighthouse listou itens que exigem verificação manual, e eles não entraram na nota.</li>
+        <li>A amostra tem uma universidade por estado, então não representa todas as federais. Cada região tem de 3 a 9 sites.</li>
+        <li>A UFRN ficou sem o teste do WAVE.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="rodape container">
+    <p>© 2026 Lívia Faria Derks</p>
+  </footer>
+</body>
+
+</html>
