@@ -2,7 +2,7 @@
 
 Meu portfólio pessoal, onde reúno projetos de **UX e acessibilidade**, **design gráfico** e **desenhos digitais**.
 
-🔗 **Ver o site:** [liviadks.github.io/Portfolio-design](https://liviadks.github.io/Portfolio-design/)
+🔗 **Ver o site:** portfolio-liviadks.vercel.app/
 
 ![Página inicial do portfólio: título "Portfólio" à esquerda, ilustração de um tigre à direita e, abaixo, os cards dos projetos](assets/img/ui/screenshot-home.webp)
 
