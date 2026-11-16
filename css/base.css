@@ -24,8 +24,11 @@ html {
 body {
   font-family: var(--fonte-texto);
   line-height: 1.6;
+  min-height: 100vh;
   color: var(--texto);
   background-color: var(--fundo);
+  background-image: linear-gradient(to bottom right, var(--fundo), #3a1c0f);
+  background-attachment: fixed;
 }
 
 img {
