@@ -15,7 +15,6 @@ Meu portfólio pessoal, onde reúno projetos de **UX e acessibilidade**, **desig
 | [Design gráfico](design.html) | Estampa Terceirão, banners da Papelaria Plug, layout do EcoPraia Florianópolis e identidade visual da MeowShop |
 | [Desenhos digitais](desenhos.html) | Galeria de ilustrações autorais |
 
-Os dados e o método do estudo de acessibilidade estão em um repositório separado: [acessibilidade-universidades-federais](https://github.com/liviadks/acessibilidade-universidades-federais).
 
 ## Como foi feito
 
