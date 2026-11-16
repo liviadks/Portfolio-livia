@@ -1,0 +1,103 @@
+/* Páginas de galeria (desenhos.html e design.html) */
+
+.page-nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+}
+
+.page-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: start;
+  margin-top: 10%;
+}
+
+.page-intro__tools {
+  font-weight: 500;
+  margin-block: 3%;
+}
+
+.page-intro a {
+  color: #ff69b4;
+  font-weight: 600;
+}
+
+.page-intro a:hover {
+  color: #ff1493;
+}
+
+/* Grade de imagens: 3 colunas por padrão, --duo para 2 colunas */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 20px auto 0;
+  list-style: none;
+}
+
+.gallery--duo {
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 2.8;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.photo img {
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+  transform: scale(1.1);
+}
+
+/* Lista de projetos (design.html) */
+.projects {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.project__title {
+  padding-bottom: 10px;
+}
+
+.project__parts {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  .gallery--duo {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery--duo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
