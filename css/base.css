@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   color: var(--texto);
   background-color: var(--fundo);
-  background-image: linear-gradient(to bottom right, var(--fundo), #3a1c0f);
+  background-image: linear-gradient(to bottom right, var(--fundo), #5a2e18);
   background-attachment: fixed;
 }
 
