@@ -102,5 +102,20 @@
   .sobre__conteudo {
     grid-template-columns: 320px 1fr;
     gap: 3rem;
+    align-items: stretch;
+  }
+
+  /* foto termina junto com os botoes */
+  .sobre__img {
+    position: relative;
+  }
+
+  .sobre__foto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
