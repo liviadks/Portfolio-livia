@@ -51,15 +51,8 @@
   object-fit: cover;
 }
 
-.gallery--4x3 img {
-  aspect-ratio: 4 / 3;
-}
-
-/* mesmo tamanho mas sem cortar (pros banners com texto na borda) */
-.gallery--inteiras img {
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background-color: var(--fundo-2);
+.gallery--7x5 img {
+  aspect-ratio: 7 / 5;
 }
 
 /* projetos de design */
